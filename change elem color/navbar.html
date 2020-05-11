@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar menu</title>
+    <style>
+    body{ 
+        background:#111;
+        position:absolute; 
+       top:20%;
+       left:20%;
+    } 
+    div { 
+       height:100px; 
+       width:90px; 
+       border-radius:50%;
+       border :3px solid #f1f1f1; 
+       float:left; 
+       margin :1rem; 
+      
+    } 
+    .div1 { 
+        background-color: #f01414f1;
+    } 
+    .div2 { 
+        background-color: #0beb1ef1;
+    } 
+    .div3 { 
+        background-color: #1d88ecf1;
+    } 
+    .div4 { 
+        background-color: #f8fc24f1;
+    } 
+    .div5 { 
+        background-color: #f518f5f1;
+    } 
+    #color { 
+        transition: background-color 0.8s;
+        border:1px solid linear-gradient(rgb(19, 190, 105));
+    }
+
+
+
+
+
+
+
+
+    @media screen and (max-width:450px) { 
+        .mysidenav { padding-top:40px;} 
+        .mysidenav a { font-size:18px; } 
+        .mybtn { font-size:14px;}
+    }
+     </style>
+    <body>
+<div class="div1" onclick= "changeColor('#e43232f1')"> </div> 
+<div class="div2" onclick= "changeColor('#0beb1ef1')"> </div>
+<div class="div3"onclick= "changeColor('#1d88ecf1')"> </div>
+<div class="div4"onclick= "changeColor('#f8fc24f1')"> </div>
+<div class="div5"onclick= "changeColor('#f518f5f1')"> </div>
+
+<div id="color"> 
+  
+</div>
+
+
+
+<script> 
+function changeColor(y) { 
+   var x = document.getElementById("color");; 
+    x.style.backgroundColor =y; 
+    
+}
+function closebtn() { 
+    document.getElementById("sideNav").style.width ="0px"; 
+    document.getElementById("main").style.marginLeft ="0px"; 
+    
+}
+</script>
+   </body>
+  </html> 
