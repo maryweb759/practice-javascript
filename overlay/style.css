@@ -1,0 +1,36 @@
+.overlay { 
+    width: 100%; 
+    /* we must let the overly fixed on scroll ********/
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 100;
+    background-color: rgba(19, 4, 4, 0.5); 
+    height: 100vh; 
+    transform: scale(0); 
+    transition: .5s;
+} 
+/* content ********************************/ 
+.content { 
+    text-align: center; 
+    position: relative; 
+    top: 20%;
+    margin-top:5%; 
+
+} 
+/* overly a ****************/ 
+.overlay a { 
+    text-decoration: none; 
+    color:#fff; 
+    display:block; 
+    font-size: 30px; 
+    margin-bottom : 2%;
+} 
+/** overly  close *********/ 
+.overlay .close { 
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    font-size: 30px;
+} 
+span { cursor:pointer; font-size:30px; padding:1rem; }

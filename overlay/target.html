@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>target</title>
+</head> 
+
+    <body onClick ="myFunction(event)"> 
+        <h1> Lorem ipsum dolor sit amet consectetur.</h1> 
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, accusamus. </span> 
+        <p>Lorem, ipsum.</p> 
+        <p id="demo"></p>
+    </body>
+    <script> 
+    
+       function myFunction(event) { // the parametre must be an event to tell us the name of the tag
+           // event give us the name of the element that we are clicking on 
+           // we use target with images ***** we can write nodeName or tagName 
+         document.getElementById("demo").innerHTML = event.target.nodeName;
+       }
+    
+    </script>
+</html>
