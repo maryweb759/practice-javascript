@@ -1,0 +1,19 @@
+* { 
+box-sizing: border-box;
+margin: 0; 
+padding: 0;
+}
+
+
+
+
+.main { 
+    width:300px; 
+    background: blue; 
+    margin: 100px auto; 
+    padding: 6px;
+} 
+.clock { 
+    background: white; 
+    text-align: center;
+}
