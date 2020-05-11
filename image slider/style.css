@@ -1,0 +1,25 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+img { 
+	width: 800px ; 
+	height: 400px; 
+	display: block; 
+	margin : 50px auto; 
+	border: 1px solid #222; 
+	padding: 5px; 
+	transition: .2s ease-in-out;
+} 
+p { 
+	width: 60%; 
+	margin : auto; 
+	background: #000; 
+	color: #fff;
+	padding: 5px; 
+	font-size: 30px; 
+	font-weight: bold; 
+	text-align : center;
+}
