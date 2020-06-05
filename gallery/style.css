@@ -1,15 +1,25 @@
+.thumbnail { 
+    margin: 5px;
+   text-align: center;
+}
 .thumbnail  img { 
     width:130px; 
     height: 80px; 
-    margin: 5px; 
+    margin: 1px; 
     border : 2px solid #DDD;
 } 
 .thumbnail  img:hover { 
     border : 2px solid #888; 
     cursor: pointer;
+} 
+.preview { 
+    max-width:800px; 
+    min-width: 100px;
+    width:100%;
+    margin: auto;
 }
 .preview img{ 
-    width:800px; 
-    height: 500px; 
+    width: 100%;
+    height: auto; 
     border : 2px solid #DDD;
 }

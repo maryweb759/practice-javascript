@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shrink navbar onscroll</title>
+</head>
+<body> 
+<style> 
+.row { background-color: blueviolet; overflow: hidden; position: fixed; width: 100%; transition: all .3s;}
+.row > div { width:250px; height:100px; border-radius: 8px; margin: 10px; float:left; transition: all .3s;} 
+.row > div:first-child { background-color: rgb(19, 17, 17);} 
+.row > div:nth-child(2) { background-color: rgb(230, 14, 14);} 
+
+.galler-2 > p { 
+    width: 400px; 
+} 
+.active { 
+  background-color: burlywood; padding: 35px 8px; 
+} 
+.active > div { 
+  height: 70px;
+}
+</style> 
+
+<boby>  
+<div class="row" id="gallery"> 
+  <div></div> 
+  <div></div> 
+</div> 
+  <div class="galler-2" > 
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore mollitia obcaecati iure ullam, doloremque consequuntur modi cum esse, doloribus cumque unde rem velit dignissimos deleniti tempore vero facere! Error totam rem quibusdam repellendus libero adipisci ut amet suscipit natus aliquam. Quod enim ipsam tempora minus? Ipsa fuga, deserunt ullam nesciunt officiis necessitatibus aperiam earum maiores, fugiat velit cum quae aliquam dolor nihil. Dignissimos, placeat? Nostrum mollitia facere quia incidunt praesentium nam blanditiis fugit, debitis voluptas. Deleniti expedita porro aspernatur esse error magnam beatae sequi nostrum perspiciatis? Quod itaque repudiandae voluptate. Voluptas fugit ipsa similique ex sint aut suscipit numquam laboriosam fuga, aperiam, facilis necessitatibus rem et praesentium ad quod, dolorum nulla fugiat? Quidem quia harum nemo commodi quod quam dolor. Iure pariatur quia blanditiis, laborum, porro, illum non beatae et facere at vitae! Ducimus fugit quo reprehenderit est debitis? Laudantium necessitatibus illum accusantium harum molestiae nisi unde suscipit consectetur cupiditate nam, vitae, porro consequuntur ipsum eveniet odio. Ipsam sed, iusto veniam iure cumque corrupti eius atque deleniti quasi aliquid nesciunt ipsa maiores laboriosam hic veritatis non ut? Ut voluptate praesentium sint obcaecati reprehenderit ipsam consequatur vel quasi dolore iure, quae quis necessitatibus dignissimos sapiente enim sunt temporibus. Fuga deserunt soluta quo nulla eveniet ipsa voluptas, iusto, aliquam eaque nam eum, eos omnis officiis provident iure nihil molestias tenetur velit deleniti? Quia ducimus itaque quibusdam beatae magni rem consectetur deleniti harum cumque? Vitae incidunt eveniet vero sed, iure possimus ratione et nobis exercitationem provident amet id numquam nemo culpa. Dolorum, quibusdam magni repellat atque harum explicabo, aliquam a, earum fugiat soluta mollitia? Eius porro necessitatibus nobis tenetur laboriosam ullam at non sint officia error. Et, quos nobis? Corrupti, nam rem sequi pariatur veniam voluptate impedit id vero inventore ea obcaecati saepe dignissimos soluta, repellat et dolor nihil, odit non sint cupiditate ratione. Optio mollitia, numquam accusantium rerum quis magnam ex asperiores. Dignissimos, eum? Delectus quo cupiditate reiciendis laudantium veniam omnis error quae labore at exercitationem, deleniti quas officia? Et exercitationem optio eligendi quasi sequi totam asperiores, vero excepturi tempore accusantium illum odit natus eum ea, voluptatibus soluta cumque doloribus ipsa fugit quidem. Magnam corrupti pariatur quas iure iste, laboriosam, id doloremque quam eveniet non ad nihil consequatur porro est molestiae saepe fugiat ullam laudantium eos suscipit, sit similique enim repellat dolores! Nihil recusandae consectetur optio tempora eligendi pariatur, facere magnam quaerat quisquam expedita modi tenetur saepe amet corrupti accusantium vitae excepturi voluptate, iste cumque ea inventore aperiam? Nobis laboriosam dolorum, placeat eum officiis, illum odit voluptates omnis odio asperiores quae sint fuga doloribus deserunt veritatis, amet voluptate numquam qui at. Animi quidem maiores a officiis fugiat dignissimos aspernatur sapiente ad, hic laboriosam similique ea natus sint, accusantium veritatis autem, repudiandae cum enim placeat impedit at debitis. Distinctio sed placeat exercitationem delectus ipsam dolor modi nihil voluptatem qui, amet ipsa sunt veniam corporis nulla dolorem, eius labore alias impedit commodi. Aspernatur commodi eaque tempora dolorem, impedit,
+   minus labore dolor sint ipsam doloribus nostrum dignissimos architecto facilis ullam vel autem quam quas culpa?</p>
+</div> 
+
+<script> 
+
+
+ window.onscroll = function () { 
+  var navbar = document.getElementById("gallery"); 
+  if (document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80) { 
+    navbar.classList.add("active");
+  } else { 
+    navbar.classList.remove("active");
+  }
+} 
+</script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+* { 
+    box-sizing: border-box; 
+    margin:0; 
+    padding: 0; 
+} 
+body{ 
+    font-family: Arial, Helvetica, sans-serif; 
+  width: 100vw;
+  
+} 
+.slider-container { 
+    border: 1px solid #222; 
+    margin: 20px auto; 
+    height: 90vh; 
+    width: 700px; 
+    position: relative; 
+    overflow:hidden;
+}
+.slider-container .slider-content { 
+    height: 100%; 
+    width: 100%; 
+    border: 1px solid rgb(206, 19, 19); 
+} 
+.slider-container .slider-content.active img { 
+    opacity:1;
+} 
+.slider-container .slider-content.active p { 
+    left:10px; 
+}
+.slider-container .slider-content img { 
+    height: 100%; 
+    width: 100%; 
+    position:absolute; 
+    top:0; 
+    left: 0;
+    transition: all .5s ; 
+    opacity:0;
+} 
+
+.slider-container .slider-content p { 
+   position:absolute; 
+   z-index:3 ; 
+   width: 300px; 
+   top: 20px; 
+   border-radius: 5px;
+   left: -300px; 
+   transition: all .5s ;
+   padding: 8px; 
+   background-color: rgb(255, 255, 255);
+}
+.slider-container span { 
+    position: absolute;  
+    display:inline-block; 
+    cursor: pointer; 
+}
+.slider-container .next { 
+    top: 50%; 
+    margin-top: -12px;
+    right: 10px;
+    border-right: 5px solid rgb(17, 6, 6); 
+    border-bottom: 5px solid rgb(17, 6, 6); 
+    width: 25px;
+    height: 25px;
+    transform: rotate(-45deg);
+    margin-bottom: -25px;
+} 
+.slider-container .prev { 
+    top: 50%;
+    margin-top: -12px;
+    border-left: 5px solid rgb(17, 6, 6); 
+    border-bottom: 5px solid rgb(17, 6, 6); 
+    height: 25px; 
+    width: 25px; 
+    transform: rotate(45deg); 
+    left: 10px;
+}
+.slider-container .prev.disabled { 
+    border-bottom: 5px solid rgb(17, 6, 6, .5); 
+    border-left: 5px solid rgb(17, 6, 6, .5); 
+    cursor : no-drop;
+}
+.slider-container .next.disabled { 
+    cursor : no-drop;
+    border-bottom: 5px solid rgb(17, 6, 6, .5); 
+    border-right: 5px solid rgb(17, 6, 6, .5); 
+    
+}
+
+
+
+
+
+
+
+
+
+/*
+.slider-container { 
+    margin: 10px auto; 
+    max-width: 443px; 
+    height:600px;  
+    position: relative; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #fff; 
+    border: 1px solid #222;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider-container  .slider-content { 
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    opacity: 1; 
+    transition: opacity 1s; 
+    z-index: 1; 
+}  
+.slider-content img {  width: 100%;
+    height: 100%; 
+    position: absolute;} 
+    .slider-content p {  width: 400px;
+        padding: 4px; 
+        bottom:10px;
+        z-index: 6; 
+        background-color: rgb(255, 250, 250, .5);
+        position: absolute;}
+
+
+
+.slider-container .slider-content.active { opacity: 1;}
+.slider-container .slide-number { 
+    position: absolute; 
+    left: 10px ; 
+    top: 10px; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #fff; 
+    border-radius: 4px;
+    padding: 5px 10px; 
+    font-size: 18px; 
+    z-index: 2;
+} 
+.slider-controls { 
+    width: 500px; 
+    margin: auto; 
+   overflow: hidden;
+}  
+.slider-controls .prev, 
+.slider-controls .next { 
+    background-color: rgb(46, 189, 189); 
+     color: #fff; 
+     font-size: 16px; 
+     border-radius: 4px; 
+     padding: 5px; 
+     text-align: center; 
+     cursor: pointer; 
+     user-select: none;
+     width: 20%; 
+} 
+.slider-controls .prev { float:left;} 
+.slider-controls .next { float:right;} 
+.slider-controls .prev.disabled, 
+.slider-controls .next.disabled {cursor:no-drop; background-color: rgba(0, 150, 136, 0.5);  } 
+.slider-controls .indicators { 
+    width: 60%; 
+    float:left; 
+} 
+.slider-controls .indicators ul { 
+    list-style:none; 
+    margin:0; 
+    text-align: center;
+} 
+.slider-controls .indicators ul li { 
+  display: inline-block; 
+  height: 14px; 
+  width: 14px; 
+  color:rgb(190, 185, 185); 
+  background-color: #f6f6f6; 
+  font-weight: bolder;  
+  cursor:pointer; 
+  margin: 5px  4px ; 
+  border-radius: 50%; 
+  border: 1px solid rgb(185, 179, 179);
+} 
+.slider-controls .indicators ul li.active { 
+    background-color:#009688 ; 
+     color: #fff; 
+}

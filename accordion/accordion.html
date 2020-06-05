@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion with css</title> 
+    <style> 
+    .content { 
+        max-width:500px; 
+        min-width: 100px;
+        width:100%;
+        margin:auto;
+    } 
+    .content input { 
+        display:none; 
+    } 
+    .content label { 
+        height:15px; 
+        line-height:15px;
+        display:block; 
+        background: #333; 
+        color:#fff; 
+        padding:20px;
+
+    } 
+    .content section { 
+        max-height:0; 
+        overflow:hidden; 
+        transition:max-height .5s ease-in-out; 
+        border:1px solid #222; 
+       
+    }  
+    
+    .content input:checked ~ section { transition:max-height .5s ease-in-out;}
+    .content input:checked ~ section.acc1 { 
+       max-height:150px;
+    } 
+    .content input:checked ~ section.acc2 { 
+       max-height:450px;
+    } 
+    .content input:checked ~ section.acc3 { 
+       max-height:350px;
+    }
+    </style>
+</head>
+<body>
+    <div class="content"> 
+        <div> 
+            <input type="radio" name="ac" id="acco1"> 
+            <label for="acco1"> home</label> 
+            <section class="acc1"> 
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum sit error earum quod facere?</p>
+            </section>
+        </div> 
+        <div> 
+            <input type="radio" name="ac" id="acco2"> 
+            <label for="acco2"> home</label> 
+            <section class="acc2"> 
+                
+                <p>  Lorem ipsum dolor sit amet consectetur, 
+                    adipisicing elit. Similique est consectetur, qui 
+                    necessitatibus vel enim dolore molestiae eaque accusamus. Accusantium dignissimos voluptates similique officiis facere, adipisci ipsam quaerat expedita necessitatibus quam libero sapiente iste saepe ducimus sit omnis reprehenderit harum ut in? Illum, nam omnis ea a iusto alias dolore natus! Quis, est autem recusandae dolorum repellendus voluptate expedita suscipit aperiam deleniti natus qui quo nulla aliquam et quam nihil rerum nesciunt officia id vel. Dignissimos suscipit dolore, atque debitis distinctio a? Molestias provident saepe illo animi sunt ipsum enim dolorum nesciunt reiciendis, blanditiis tenetur quae dolor et deleniti quo veniam esse voluptate qui ut voluptatem delectus, possimus nam voluptas distinctio? Quaerat, accusantium unde! Ducimus neque quos rerum culpa? Nemo beatae ab dicta sunt eius aperiam optio enim ex, maxime architecto explicabo ducimus non? Eaque, dolores. Ea animi sequi eos magnam voluptatum quos provident ut veniam. Eius animi fugit impedit ut corrupti iure culpa pariatur aliquam est, repellat incidunt sequi facilis corporis dolore quod ipsam autem totam natus at hic cumque assumenda dicta, obcaecati mollitia? Doloremque odit, fugiat cum omnis animi corporis iusto facilis nesciunt quasi aliquam? Cumque ut, sequi excepturi sapiente quibusdam iure voluptatu
+                m veritatis pariatur a voluptatem nobis?</p> 
+            </section>
+        </div> 
+        <div> 
+            <input type="radio" name="ac" id="acco3"> 
+            <label for="acco3"> home</label> 
+            <section class="acc3"> 
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum sit error earum quod facere?</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
