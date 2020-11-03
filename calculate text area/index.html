@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<style> 
+
+.zero { 
+  color:red;
+} 
+
+</style>
+<body>  
+<h3> remove placeholder on focus</h3>
+<input type="text" placeholder="enter your name" id="input-text"> <br> <br>
+
+<h3>calculate textArea character  </h3>
+    <textarea name="" id="text" cols="30" rows="10" maxlength="100"> </textarea> <br>
+    <span id="count">100</span>  <br> 
+    
+</body> 
+<script>  
+// stat remove placeholder onfocus
+
+var input_ = document.getElementById("input-text"); 
+input_.onfocus = function() { 
+ this.setAttribute('data-holder', 
+ this.getAttribute('placeholder')); 
+ this.setAttribute('placeholder', '');
+} 
+input_.onblur = function() { 
+this.setAttribute('placeholder', this.getAttribute('data-holder'));
+ this.setAttribute('data-holder','');
+ 
+}
+
+
+// calculate textArea character 
+var text = document.getElementById("text");
+var count = document.getElementById("count");
+var countText = text.getAttribute('maxlength');
+console.log(countText); 
+text.oninput = function() { 
+ count.innerHTML = countText - this.value.length;
+ 
+ count.innerHTML = countText - this.value.length;
+ if (count.innerHTML == 0) { 
+    count.classList.add("zero");
+ } else { 
+  count.classList.remove("zero");
+ }
+};
+
+
+
+
+
+ function capitalizeLetter(string) { 
+       // split function convert the string into array and separate words
+  var oldArray = string.split(' '); 
+  var newArray = []; 
+ for(var i = 0; i < oldArray.length; i++) { 
+ // charAt function takes one letter from the array 
+ // slice function remove the letter u specified form an Array
+  newArray.push(oldArray[i].charAt(0).toUpperCase() + oldArray[i].slice(1))  ; 
+ } 
+  return newArray ;
+} 
+console.log(capitalizeLetter("hello world")); 
+
+
+</script>
+</html>

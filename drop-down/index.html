@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<style> 
+  ul { list-style: none; margin: 0; padding: 0; }
+ul li {
+  width: 100px;
+  float: left;
+  background: #dbdbdb;
+  line-height: 2em;
+  text-align: center;
+  margin: 0 5px;
+  cursor: pointer;
+}
+ul li span {
+  display: block;
+}
+ul li ul {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+</style>
+<body>
+    <ul>
+        <li>
+          <span onclick="testFunc(this)">Item 1</span>
+          <ul>
+            <li>Sub Item 1</li>
+            <li>Sub Item 2</li>
+          </ul>
+        </li>
+        <li>
+          <span class="dropDown">Item 3</span>
+          <ul>
+            <li>Sub Item 1</li>
+            <li>Sub Item 2</li>
+          </ul>
+        </li>
+        <li>
+          <span class="dropDown">Item 3</span>
+          <ul>
+            <li>Sub Item 1</li>
+            <li>Sub Item 2</li>
+          </ul> 
+        </li>
+        <li>
+          <span class="dropDown">Item 4</span>
+          <ul>
+            <li>Sub Item 1</li>
+            <li>Sub Item 2</li>
+          </ul>
+        </li>
+      </ul>
+
+
+
+
+
+
+
+<script> 
+/*
+ function testFunc(el) {
+  var parent = el.parentElement;
+  var dd = parent.lastChild.previousSibling;
+  dd.classList.toggle('show');
+} */
+
+ 
+let opened = null
+const toggleVisibility = e => e.classList.toggle('show')
+
+const handleDropdown = e => {
+
+  const clickedItem = e.parentElement.lastChild.previousSibling
+
+  toggleVisibility(clickedItem)
+  
+if (!opened) {
+    opened = clickedItem
+  } else if (opened == clickedItem) {
+    opened = null
+  } else {
+    toggleVisibility(opened)
+    opened = clickedItem
+  } 
+
+}
+
+const handleClick = e => {
+
+  if (e.target.className.includes('dropDown')) {
+    handleDropdown(e.target)
+  } else if (opened) {
+    toggleVisibility(opened)
+    opened = null
+  }
+
+}
+  document.addEventListener('click', handleClick); 
+</script>
+
+</body>
+</html>

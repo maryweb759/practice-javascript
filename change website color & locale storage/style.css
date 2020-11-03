@@ -1,0 +1,70 @@
+* { 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+} 
+body { 
+    font-style: "open-sans", sans-serif; 
+    font-size: 29px;
+} 
+.container { 
+    margin: 20px auto; 
+    max-width: 1200px;
+} 
+.container .color-switcher { 
+    list-style: none; 
+    margin-bottom: 20px; 
+    text-align: center;
+} 
+.container .color-switcher li { 
+    width: 20px; 
+    height: 20px; 
+    cursor: pointer; 
+    display: inline-block; 
+} 
+.container .color-switcher li:first-child { 
+    background-color: rgb(241, 40, 40);
+} 
+.container .color-switcher li:nth-child(2) { 
+    background-color: rgb(13, 158, 49);
+} 
+.container .color-switcher li:nth-child(3) { 
+    background-color: rgb(234, 40, 241);
+} 
+.container .color-switcher li:nth-child(4) { 
+    background-color: rgb(17, 16, 17);
+} 
+.container h3 { 
+    color: rgb(241, 40, 40);
+} 
+.container div { 
+    background-color: rgb(241, 40, 40); 
+    padding: 20px; color: #fff;
+} 
+.red .container h3 { 
+    color: rgb(241, 40, 40);
+} 
+.red .container div { 
+    background-color: rgb(241, 40, 40); 
+    padding: 20px; color: #fff;
+} 
+.green .container h3 { 
+    color: rgb(13, 158, 49);
+} 
+.green .container div { 
+    background-color: rgb(13, 158, 49);; 
+    padding: 20px; color: #fff;
+} 
+.purple .container h3 { 
+    color: rgb(234, 40, 241);
+} 
+.purple .container div { 
+    background-color:rgb(234, 40, 241);
+    padding: 20px; color: #fff;
+} 
+.black .container h3 { 
+    color: rgb(17, 16, 17);
+} 
+.black .container div { 
+    background-color:rgb(17, 16, 17);
+    padding: 20px; color: #fff;
+}

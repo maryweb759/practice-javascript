@@ -1,0 +1,24 @@
+* {  box-sizing: border-box; } 
+body { font-family: sans-serif; background-color: rgb(228, 89, 165); } 
+h1 { color:#eee;   margin-bottom: 30px;} 
+.container { 
+    padding: 40px; margin: 0 auto; text-align: center; max-width: 900px;
+} 
+.searchwrapper {position: relative;} 
+.searchwrapper::before { 
+    content: '🔍'; 
+    position: absolute; 
+    right:10px; top: 6px;
+
+}
+#searchbar { outline: none; border:none; height:32px; font-size: 12px; padding:5px 10px; width:100%; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; }
+#characterlist { display:grid; grid-gap:20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); padding-inline-start: 0; } 
+.character { list-style-type: none; background-color: #eee; padding:10px 20px; display:grid; grid-template-columns: 3fr 1fr;
+    grid-template-areas: 'name image' 
+                          'house image'; 
+    text-align: left;
+     border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px; }
+.character > h2 { grid-area: name; margin-bottom:0px;} 
+.character > p { grid-area: house; margin:0px; margin-top: -18px;    } 
+
+.character > img { grid-area: image; max-height:120px;}
